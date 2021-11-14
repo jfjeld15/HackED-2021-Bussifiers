@@ -16,6 +16,11 @@ Python:
 - Numpy
 - Matplotlib
 - Tkinter
+- Webbrowser
+
+## Note:
+
+To run the file "grad_numpy.py", the user may need to input 'pip' or 'sudo install' commands for matplotlib and numpy into their desired terminal.
 
 ## Team
 
