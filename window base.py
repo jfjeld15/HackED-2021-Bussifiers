@@ -1,14 +1,19 @@
 import tkinter as tk
 from tkinter import filedialog, Text
 import os
+from tkinter.constants import NW
 
 root = tk.Tk()
 
-canvas = tk.Canvas(root, height = 600, width = 600)
+
+earthmap = tk.PhotoImage(file="./rocky.png")
+canvas = tk.Canvas(root, width=1779, height=1691)
+
+
 canvas.pack()
 
-earthmap = tk.Frame(root, bg="#3e646c")
-earthmap.place(relwidth=0.8, relheight=0.8, rely=0.1, relx=0.1)
+canvas.create_image(0, 0, anchor=NW, image = earthmap)
+
 
 root.mainloop()
 
