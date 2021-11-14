@@ -26,8 +26,9 @@ arr = arr[:, :, None]
 arr = (arr+0.8) * outer + (arr) * (inner+0.4)
 
 # disp gradient 
-plt.figure(figsize = (8.33, 7.66))
-plt.imshow(arr[:], cmap='gray')
-plt.savefig('./images/grad_plt.png')
+plt.figure(figsize = (8.33, 7.66))      # size of figure
+plt.imshow(arr[:], cmap='gray')         # image display
+plt.axis('off')                         # removal of axis
+plt.savefig('./images/grad_plt.png', bbox_inches='tight', transparent=True)
 plt.show()
 
