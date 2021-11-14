@@ -2,6 +2,7 @@ import tkinter
 from tkinter.constants import CENTER
 import webbrowser
 
+
 def genButts(root, baseC):  # Generate Buttons
     whistler = tkinter.Button(root, bg="gold", command=open_whistler)  # Whistler
     baseC.create_window(105,498, height=13, width=13, anchor=CENTER, window=whistler)
@@ -34,6 +35,8 @@ def genButts(root, baseC):  # Generate Buttons
     baseC.create_window(773,579, height=13, width=13, anchor=CENTER, window=fernie)
     return
 
+
+# Links to open the sites:
 def open_whistler():  # Whistler
     webbrowser.open_new_tab("https://www.whistlerblackcomb.com/")
     return
@@ -73,4 +76,3 @@ def open_redMtn():  # Red Mtn
 def open_fernie():  # Fernie
     webbrowser.open_new_tab("https://skifernie.com/")
     return
-
