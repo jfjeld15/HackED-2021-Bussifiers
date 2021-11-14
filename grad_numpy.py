@@ -22,6 +22,6 @@ arr = (arr+0.8) * outer + (arr) * (inner+0.4)
 
 # disp gradient 
 plt.imshow(arr[:], cmap='gray')
-plt.savefig('./images/grad_plt.png')
+plt.savefig('./images/grad_plt.png', transparent = True)
 plt.show()
 
