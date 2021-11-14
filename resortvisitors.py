@@ -1,13 +1,13 @@
 import tkinter
-from tkinter.constants import LEFT, NW
+from tkinter.constants import NW
 
 
-def year(val):  # Gets the year from the slider
-    year = print(str(val))
-    return year
+def set_year(val):
+    set_year.year = val
+    return
 
-
-def genPops(root, yearS, year):
-    whistler = tkinter.Label(root, text="Total visitors in {}:\n{}".format(year,6), width=28, bg="red")
+# THIS IS A MESS LOL
+def genPops(root, yearS):
+    whistler = tkinter.Label(root, text=str(set_year.year), width=28, bg="red")
     whistler.place(x=833, y=66, anchor=NW)
     return
