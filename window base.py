@@ -8,8 +8,6 @@ root = tk.Tk()
 
 earthmap = tk.PhotoImage(file="./rocky.png")
 canvas = tk.Canvas(root, width=1779, height=1691)
-
-
 canvas.pack()
 
 canvas.create_image(0, 0, anchor=NW, image = earthmap)
