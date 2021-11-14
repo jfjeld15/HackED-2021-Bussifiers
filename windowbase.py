@@ -17,4 +17,4 @@ def initWindow(root):  # Create base window
 if __name__== "__main__":  # Main function
     root = tk.Tk()  # Create base window "root" using built-in tkinter module
     baseC = initWindow(root)
-    rb.genButts(baseC)
+    rb.genButts(baseC)  # Uses module resortbuttons to generate buttons that link resort websites
