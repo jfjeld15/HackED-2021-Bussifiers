@@ -8,9 +8,14 @@ import numpy as np  # in windows terminal, run "pip install matplotlib"
 x_axis = np.linspace(-1, 1, 833)
 y_axis = np.linspace(-1, 1, 766)
 
+# center of Whistler
+center_whis = [(1 - 2/833*105), (1 - 2/766*498)]
+center_sP = [(1 - 2/833*362), (1 - 2/766*404)]
+
 # generate np.array
-xx, yy = np.meshgrid(x_axis, y_axis)
-arr = np.sqrt(xx ** 2 + yy ** 2)
+xx_whis, yy_whis = np.meshgrid(x_axis+center_whis[0], y_axis+center_whis[1])
+xx_sP, yy_sP = np.meshgrid(x_axis+center_sP[0], y_axis+center_sP[1])
+arr = np.sqrt(xx_whis ** 2 + yy_whis ** 2)
 
 # adj color
 inner = np.array([0.1, 0.3, 0.3])[None, None, :]
