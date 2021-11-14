@@ -1,25 +1,26 @@
 import tkinter as tk
 from tkinter.constants import HORIZONTAL, NW
 import resortbuttons as rb
-import resortvisitors as rv
+import resortsnow as rs
 
 
 def initWindow(root):  # Create base window
+    def printyear():
+        rs.genLabels(root, yearS)  # Uses module resortsnow to generate labels in window
+        root.after(100, printyear)  # Update the labels every 100ms
+        return
+
     root.title("Bussifiers' Ski Trip Planner")
-
     earthmap = tk.PhotoImage(file="./images/rockylabels.png")
-
     baseC = tk.Canvas(root, width=1033, height=766)  # Canvas dimensions are the image dimensions
-    yearS = tk.Scale(root, from_=2000, to=2018, orient=HORIZONTAL, width=20, length=200)  # Slider for yearly pop. data
+    yearS = tk.Scale(root, from_=2003, to=2018, orient=HORIZONTAL, width=20, length=200)  # Slider for yearly snowfall data
     baseC.create_image(0, 0, anchor=NW, image=earthmap)
     rb.genButts(root, baseC)  # Uses module resortbuttons to generate buttons that link resort websites
     yearS.place(x=833, y=0, anchor=NW)
-    ###########rv.genPops(root, yearS)  # Uses module resortvisitors to generate visitor populations based on slider
     baseC.pack()
+    root.after(100, printyear)
     root.mainloop()
-    return
 
 if __name__== "__main__":  # Main function
     root = tk.Tk()  # Create base window "root" using built-in tkinter module
     initWindow(root)
-    
