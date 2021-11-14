@@ -2,7 +2,7 @@
 
 # load libraries
 import matplotlib.pyplot as plt
-import numpy as np
+import numpy as np  # in windows terminal, run "pip install matplotlib"
 
 # initialize grid
 x_axis = np.linspace(-1, 1, 256)
