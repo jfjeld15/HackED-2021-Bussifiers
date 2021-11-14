@@ -3,14 +3,14 @@ from tkinter.constants import NW
 
 """ LABELS:
 wpop: Whistler yearly snowfall (https://www.onthesnow.com/british-columbia/whistler-blackcomb/historical-snowfall)
-SPpop: Sun Peaks
+SPpop: Sun Peaks (https://www.onthesnow.com/british-columbia/sun-peaks/historical-snowfall)
 SSpop: Silverstar (https://www.onthesnow.com/british-columbia/silver-star/ski-resort)
-Revpop: Revelstoke
-kickpop: Kicking Horse
-louisepop: Lake Louise
-SVpop: Sunshine Village
-fernpop: Fernie
-RMpop: Red Mountain
+Revpop: Revelstoke (https://www.onthesnow.com/british-columbia/revelstoke-mountain/historical-snowfall)
+kickpop: Kicking Horse (https://www.onthesnow.com/british-columbia/kicking-horse/historical-snowfall)
+louisepop: Lake Louise (https://www.onthesnow.com/alberta/lake-louise/historical-snowfall)
+SVpop: Sunshine Village (https://www.onthesnow.com/alberta/sunshine-village/historical-snowfall)
+fernpop: Fernie (https://www.onthesnow.com/british-columbia/fernie-alpine/historical-snowfall)
+RMpop: Red Mountain (https://www.onthesnow.com/british-columbia/red-resort/historical-snowfall)
 BWpop: Big White (https://www.onthesnow.com/british-columbia/big-white/historical-snowfall)
 """
 def genLabels(root, yearS):
