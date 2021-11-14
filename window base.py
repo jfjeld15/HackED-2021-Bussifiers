@@ -1,17 +1,16 @@
 import tkinter as tk
-from tkinter import filedialog, Text
 import os
 from tkinter.constants import NW
 
-root = tk.Tk()
+def initWindow(root):  # Create base window
+    root.title("Bussifiers' Ski Trip Planner")
+    earthmap = tk.PhotoImage(file="./images/rockylabels.png")
+    baseC = tk.Canvas(root, width=833, height=766)
+    baseC.pack()
+    baseC.create_image(0, 0, anchor=NW, image=earthmap)
+    root.mainloop()
+    return
 
-
-earthmap = tk.PhotoImage(file="./rocky.png")
-canvas = tk.Canvas(root, width=1779, height=1691)
-canvas.pack()
-
-canvas.create_image(0, 0, anchor=NW, image = earthmap)
-
-
-root.mainloop()
-
+if __name__== "__main__":  # Main function
+    root = tk.Tk()  # Create base window "root" using built-in tkinter module
+    initWindow(root)
