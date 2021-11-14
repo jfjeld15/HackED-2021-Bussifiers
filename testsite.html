@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {text-align: center;}
+            div {text-align: center;}
+            
+        </style>
+        <title>Bussifiers</title> <!--Tab Title-->
+    </head>
+    <body >
+        <h1>Bussifiers</h1>
+        
+        <div>
+            <p>This website was created for the HackED Beta Hackathon. It is geared towards ECE students containing a Karnaugh map simplifier and a GPA calculator.</p>
+        </div>
+
+        <div>
+            <select>
+            <option>Karnaugh Map Simplifier</option>
+            <option>GPA Calculator</option>
+        </select>
+        </div>
+        
+        Get a K-map and simplified expression from minterms:
+        <table border="1">
+            <tr>
+                <td>Enter Variables as comma separated values</td>
+                <td>
+                    <form action="index.html" method="GET"> <!--Seems like the method to get data for GPA calc and K-map-->
+                        <input type="text" name="name" placeholder="Variables">
+                        <button type="submit">Submit</button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter minterms as comma separated values</td>
+                <td> <form action="index.html" method="GET"> <!--Seems like the method to get data for GPA calc and K-map-->
+                    <input type="text" name="name" placeholder="Summation of minterms">
+                    <button type="submit">Submit</button>
+                </form>
+                </td>
+            </tr>
+        </table>
+        
+        <p>
+
+        </p>
+
+        Get a K-map and simplified expression from a truth table:
+        <table border="1">
+            <tr>
+                <td>
+                    Index
+                </td>
+                <td>
+                    
+                </td>
+                <td>
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    0
+                </td>
+                <td>
+                    <input type="radio" name="index0"/> 0 <br>
+                </td>
+                <td>
+                    <input type="radio" name="index0"/> 1 <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    <input type="radio" name="index1"/> 0 <br>
+                </td>
+                <td>
+                    <input type="radio" name="index1"/> 1 <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    2
+                </td>
+                <td>
+                    <input type="radio" name="index2"/> 0 <br>
+                </td>
+                <td>
+                    <input type="radio" name="index2"/> 1 <br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    3
+                </td>
+                <td>
+                    <input type="radio" name="index3"/> 0 <br>
+                </td>
+                <td>
+                    <input type="radio" name="index3"/> 1 <br>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+
+</html>
