@@ -1,36 +1,24 @@
 ## using numpy for generation of gradient image ##
 
 # load libraries
-from matplotlib import image
-from matplotlib import pyplot
 import matplotlib.pyplot as plt
 import numpy as np
-from PIL import Image
 
-def get_gradient_2d(start, stop, width, height, is_horizontal):
-    if is_horizontal:
-        return np.tile(np.linspace(start, stop, width), (height, 1))
-    else:
-        return np.tile(np.linspace(start, stop, height), (width, 1)).T
+# initialize grid
+x_axis = np.linspace(-1, 1, 256)
+y_axis = np.linspace(-1, 1, 256)
 
-def get_gradient_3d(width, height, start_list, stop_list, is_horizontal_list):
-    result = np.zeros((height, width, len(start_list)), dtype=float)
+# generate np.array
+xx, yy = np.meshgrid(x_axis, y_axis)
+arr = np.sqrt(xx ** 2 + yy ** 2)
 
-    for i, (start, stop, is_horizontal) in enumerate(zip(start_list, stop_list, is_horizontal_list)):
-        result[:, :, i] = get_gradient_2d(start, stop, width, height, is_horizontal)
+# toggle color
+inner = np.array([0.1, 0.3, 0.4])[None, None, :]
+outer = np.array([0.9, 1, 0.9])[None, None, :]
 
-    return result
+# control radius and radius color
+arr = arr[:, :, None]
+arr = (arr - 0.2) * outer + (1 - arr) * (inner)
 
-array = get_gradient_3d(512, 256, (0, 0, 0), (255, 255, 255), (True, True, True))
-Image.fromarray(np.uint8(array)).save('./images/teehee.png', quality=95)
-
-
-
-"""
-#load image as pixel array
-im = image.imread('./images/rockylabels.png')
-
-#display array as image
-pyplot.imshow(im)
-pyplot.show()
-"""
+plt.imshow(arr, cmap='gray')
+plt.show()
