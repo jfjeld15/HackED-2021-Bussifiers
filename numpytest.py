@@ -18,8 +18,10 @@ outer = np.array([0.8, 0.9, 0.8])[None, None, :]
 
 # adj radius size
 arr = arr[:, :, None]
-arr[0] = (arr+0.8) * outer + (arr) * (inner+0.4)
+arr = (arr+0.8) * outer + (arr) * (inner+0.4)
 
 # disp gradient 
 plt.imshow(arr[:], cmap='gray')
+plt.savefig('./images/grad_plt.png')
 plt.show()
+
